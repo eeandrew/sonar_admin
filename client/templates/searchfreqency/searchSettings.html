@@ -3,11 +3,19 @@
 	<div class="card-content  white-text">
 		<span class="card-title">搜索频率设置</span>
 		<p>改变标讯的搜索频率限制，单位次每分钟。此更改立即生效。</p>
-		<input type="number">
+		{{#if editMode}}
+		<input type="number" id="max_search_frequency" value="{{max_search_frequency}}">
+		{{else}}
+		<input type="number"  value="{{max_search_frequency}}" disabled>
+		{{/if}}
 	</div>
 	<div class="card-action">
-		<a href="#">保存</a>
-		<a href="#">取消</a>
+		{{#if editMode}}
+		<a href="#" id="save">保存</a>
+		<a href="#" id="cancel">取消</a>
+		{{else}}
+		<a href="#" id="edit">更改</a>
+		{{/if}}
 	</div>
 {{/card}}
 </template>	

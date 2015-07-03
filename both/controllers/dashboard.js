@@ -1,9 +1,9 @@
 DashboardController = AppController.extend({
   waitOn: function() {
-    return this.subscribe('items');
+    return Meteor.subscribe('settings');
   },
   data: {
-    items: Items.find({})
+    settings: Settings.findOne({})
   },
   onAfterAction: function () {
     Meta.setTitle('Dashboard');

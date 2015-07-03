@@ -1,23 +1,10 @@
-Router.route('/', {
-  name: 'home'
+
+Router.route('/',{
+	name: 'dashboard',
+	controller:'DashboardController'
 });
 
 
 
-Router.route('/items/new', {
-  name: 'items.new'
+Router.plugin('ensureSignedIn', {
 });
-
-
-Router.route('dashboard',{
-	name: 'dashboard'
-});
-
-Router.route('configure',{
-	name: 'configure'
-});
-
-
-// Router.plugin('ensureSignedIn', {
-//   only: ['dashboard']
-// });
