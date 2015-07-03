@@ -1,0 +1,31 @@
+<template name="dashboard">
+  {{#contentFor "header"}}
+    {{> _header}}
+  {{/contentFor}}
+
+  {{#contentFor "leftnav"}}
+    {{> _leftnav}}
+  {{/contentFor}}
+
+  <!--Main Body-->
+  <div class="container">
+  	<div class="row">
+  		<!--搜索频率设置-->
+  		<div class="col s6">
+  			{{> searchSettings}}
+  		</div>
+  		<!--标讯更新间隔设置-->
+  		<div class="col s6">
+  			{{> bulletinSettings}}
+  		</div>
+  		<!--新闻更新间隔设置-->
+  		<div class="col s6">
+  			{{> newsSettings}}
+  		</div>
+  		<!--关键词轮播设置-->
+  		<div class="col s12">
+  			{{> channelSettings}}
+  		</div>
+  	</div>
+  </div>
+</template>
