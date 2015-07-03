@@ -4,8 +4,8 @@ if(Meteor.users.find().count() === 0) {
 		return user;
 	});
 	Accounts.createUser({
-		email:'admin@zb.com',
-		password:'passwd',
+		email:'sonar_web_admin@zhongbiao.mobi',
+		password:'sonarwebadmin',
 		role:'root'
 	});
 }

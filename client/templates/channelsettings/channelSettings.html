@@ -1,13 +1,15 @@
 <template name="channelSettings">
 	{{#card}}
 		<div class="card-content white-text">
-			<span class="card-title">新闻更新间隔设置</span>
-			<p>改变新闻更新间隔，单位分钟。次更改会在上次间隔完成后生效。</p><br>
-			<span>轮播间隔</span><input type="number" placeholder="轮播间隔">
-			<span>关键词</span><input type="text" placeholder="关键词">
+			<span class="card-title">频道设置</span>
+			<p>添加或删除频道。此更改会在下次标讯更新间隔到来时生效。</p><br>
+			{{#each channels}}
+				{{> channelItem}}
+			{{/each}}
+			<p>添加频道</p><input type="text" id="new_channel" placeholder="关键词">
 		</div>
 		<div class="card-action">
-			<a href="#">保存</a>
+			<a href="#" class="save">保存</a>
 			<a href="#">取消</a>
 		</div>
 	{{/card}}

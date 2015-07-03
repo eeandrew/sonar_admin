@@ -3,11 +3,19 @@
 		<div class="card-content white-text">
 			<span class="card-title">标讯更新间隔设置</span>
 			<p>改变标讯更新间隔，单位分钟。此更改会在上次间隔完成后生效。</p>
-			<input type="number">
+			{{#if editMode}}
+				<input type="number" id="bulletin_update_interval" value="{{bulletin_update_interval}}">
+			{{else}}
+				<input type="number"  value="{{bulletin_update_interval}}" disabled>
+			{{/if}}
 		</div>
 		<div class="card-action">
-			<a href="#">保存</a>
-			<a href="#">取消</a>
+			{{#if editMode}}
+			<a href="#" id="save">保存</a>
+			<a href="#" id="cancel">取消</a>
+			{{else}}
+			<a href="#" id="edit">更改</a>
+			{{/if}}
 		</div>
 	{{/card}}
 </template>

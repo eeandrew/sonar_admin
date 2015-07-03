@@ -1,0 +1,1 @@
+BulletinChannel = new Mongo.Collection('bulletinchannel');
